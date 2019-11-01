@@ -1,0 +1,18 @@
+<image style="width: 100%; height: 240px; background-color: #eeeeee;" src="/pages/images/indeximg.gif"></image>
+
+<view class="flex padding justify-center">
+  <button class="padding-sm margin-xs bg-olive cu-btn round shadow" bindtap="clickChooseImage" data-index="album">相册选图</button>
+  <button class="padding-sm margin-xs bg-olive cu-btn round shadow" bindtap="clickChooseImage" data-index="camera">拍照选图</button>
+</view>
+
+<view class="solid-bottom padding-xs flex align-center">
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-xl padding">
+      <text class="text-black text-bold">{{ocrMessage}}</text>
+      <button style="margin-left:20rpx" wx:if="{{ocrCopyBtn}}" class="cu-btn lines-green round sm shadow" bindtap="copyText" data-text="{{ocrCopyText}}">点击复制</button>
+    </view>
+      <view class="padding" wx:for="{{ocrText}}" wx:for-index="idx" wx:for-item="item">
+                {{item.text}}
+      </view>
+  </view>
+</view>

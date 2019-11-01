@@ -1,0 +1,37 @@
+<!-- 头像 -->
+  <view class="padding">
+    <view class="grid col-1 text-center">
+      <!-- 头像 -->
+      <view class="padding">
+        <view class="cu-avatar round xl" style="background-image:url({{userHead}});">
+        </view>
+      </view>
+      <!-- 昵称 -->
+      <view class="padding">
+        <view wx:if="{{userName==''}}">
+          <button class="cu-btn round bg-white" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登陆</button>
+        </view>
+        <view class="cu-btn round bg-white" wx:elif="{{userName!=''}}">
+             {{userName}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+<!-- 功能区 -->
+   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+    <!-- <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="share">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">分享好友</text>
+      </button>
+    </view> -->
+  </view>
+ 
+
