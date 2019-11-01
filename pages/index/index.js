@@ -113,7 +113,7 @@ Page({
   },  
   //转发
   onShareAppMessage:function(e){
-    console.log(e)
+    
     var that = this;
     if (e.from === 'button') {
       // 来自页面内转发按钮
