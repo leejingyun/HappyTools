@@ -23,16 +23,15 @@ Page({
       success(res) {
         // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFiles
-        // if (tempFilePaths1[0].size > 2097152){
+        // console.log(res)
+        // if (res.tempFiles[0].size > 2097152){
         //   wx.showToast({
-        //     title: '成功',
+        //     title: '图片太大',
         //     icon: 'success',
         //     duration: 2000
         //   })
         // }
-        // self.setData({
-        //   imageUrl: tempFilePaths[0].path
-        // })
+ 
         //请求后台ocr接口
         wx.showLoading({
           title: '解析中'
@@ -110,26 +109,16 @@ Page({
       success: function (res) {
       }
     })
-  },  
+  }
+  ,
   //转发
-  onShareAppMessage:function(e){
-    
-    var that = this;
-    if (e.from === 'button') {
-      // 来自页面内转发按钮
-      return {
-        title: 'button',
-        path: '/pages/index/index',
-        imageUrl: '/pages/images/defultHead.png' //不设置则默认为当前页面的截图
-      }
-    }
-
+  onShareAppMessage: function (e) {
     if (e.from === 'menu') {
       // 来自页面内转发按钮
       return {
-        title: 'menu',
+        title: 'HappyTools',
         path: '/pages/index/index',
-        imageUrl: '/pages/images/defultHead.png' //不设置则默认为当前页面的截图
+        imageUrl: '/pages/images/share.png' //不设置则默认为当前页面的截图
       }
     }
   }

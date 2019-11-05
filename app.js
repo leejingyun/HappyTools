@@ -10,4 +10,5 @@ App({
     userInfo: null,
     serverUrl:"https://thornflower.cn/"
   }
+  
 })

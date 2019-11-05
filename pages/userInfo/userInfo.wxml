@@ -9,7 +9,7 @@
       <!-- 昵称 -->
       <view class="padding">
         <view wx:if="{{userName==''}}">
-          <button class="cu-btn round bg-white" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登陆</button>
+          <button class="cu-btn round bg-white" open-type="getUserInfo" bindgetuserinfo="loginServer">登陆</button>
         </view>
         <view class="cu-btn round bg-white" wx:elif="{{userName!=''}}">
              {{userName}}
